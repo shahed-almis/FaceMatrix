@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+@layer base{
+    @font-face {
+        font-family: 'cario';
+        src: url('/public/assets/fonts/Cairo-Medium.ttf');
+    }
+}
+
+body {
+    @apply opacity-0 font-cairo min-h-screen flex flex-col m-0 p-0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
